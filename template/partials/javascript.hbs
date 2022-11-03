@@ -1,0 +1,99 @@
+ <script>
+        let menu = document.getElementById("menu")
+        let navbar = document.querySelector("nav")
+        let image = document.querySelector("#image1")
+        let image2 = document.querySelector("#image2")
+        let forward = document.getElementById("forward")
+        let backward = document.getElementById("backward")
+        let forward1 = document.getElementById("forward1")
+        let backward2 = document.getElementById("backward1")
+        let image_array = ["./images/image1.jpeg", "./images/image2.jpeg", "./images/image3.jpeg"]
+        let counter = 0
+        let counter2 = 0
+
+
+        //  for menu
+        //  for menu
+        menu.addEventListener("click", (e) => {
+
+            if (navbar.style.display === "none") {
+
+
+                navbar.style.display = "flex"
+
+            }
+            else {
+
+                navbar.style.display = "none"
+            }
+        })
+        forward.addEventListener("click", () => {
+
+            // for carosule
+            counter++
+            if (counter === 1) {
+                image.src = image_array[counter]
+            }
+            if (counter === 2) {
+                image.src = image_array[counter]
+            }
+            if (counter === 3) {
+                counter = 0
+                image.src = image_array[counter]
+            }
+            console.log(counter)
+        })
+        // for backward movement
+        backward.addEventListener("click", () => {
+
+            counter--
+            if (counter === 1) {
+                image.src = image_array[counter]
+            }
+            if (counter === 2) {
+                image.src = image_array[counter]
+            }
+            if (counter === 0) {
+                image.src = image_array[counter]
+            }
+            if (counter === -1) {
+                counter = 2
+                image.src = image_array[counter]
+            }
+            console.log(counter)
+        })
+        forward1.addEventListener("click", () => {
+            counter2++
+            if (counter2 === 1) {
+                image2.src = image_array[counter2]
+            }
+            if (counter2 === 2) {
+                image2.src = image_array[counter2]
+            }
+            if (counter2 === 3) {
+                counter2 = 0
+                image2.src = image_array[counter2]
+            }
+            console.log(counter)
+        })
+        // for backward movement
+        backward1.addEventListener("click", () => {
+
+            counter2--
+            if (counter2 === 1) {
+                image2.src = image_array[counter2]
+            }
+            if (counter2 === 2) {
+                image2.src = image_array[counter2]
+            }
+            if (counter2 === 0) {
+                image2.src = image_array[counter2]
+            }
+            if (counter2 === -1) {
+                counter2 = 2
+                image2.src = image_array[counter2]
+            }
+            console.log(counter)
+        })
+        
+    </script>
