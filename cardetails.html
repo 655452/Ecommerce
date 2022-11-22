@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card-wrap{
+            width: auto;
+        }
+        form{
+            font-weight: bolder;
+            font-size: 16px;
+            width: 30%;
+            margin: 20vh auto;
+            padding: 15px; 
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: column;
+             
+             background-image: url("./images/bag9.jpg");
+             background-size: cover;
+             border-radius: 20px;
+        }
+        input,label,textarea{
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+           color: white;
+            border-radius: 10px;
+        }
+        input,textarea{
+            color: black;
+            background-color: rgb(205, 200, 200);
+        }
+        #submit{
+            font-weight: bolder;
+           font-size: 13px;
+            margin-top: 5vh;
+            width: 70%;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: rgb(12, 196, 12);
+            /* background-color: rgb(16, 16, 254); */
+            color: white;
+        }
+        #submit:hover{
+            background-color: rgb(22, 163, 22);
+            /* background-color: rgb(7, 7, 194); */
+        }
+        @media only screen and (max-width: 836px) {
+            form{
+                width: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div card-wrap>
+          
+             <form action="">
+                <label for="">Load the image</label>
+                <input type="file" placeholder="">
+                <label for="">Enter the card name</label>
+                <textarea name="" id=""  placeholder="car description"></textarea>
+                <label for="">Enter Card Price</label>
+                <input type="number">
+                <button id="submit" type="submit">Submit</button>
+
+             </form>
+          
+    </div>
+    
+</body>
+</html>

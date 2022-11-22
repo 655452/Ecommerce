@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            width: auto;
+            height: 15vh;
+            background:linear-gradient(45deg,rgb(22, 184, 117),transparent);
+            border-radius: 20px;
+            display: flex;
+            transition: 1s;
+            margin-bottom: 10vh;
+        }
+        span,a{
+            text-decoration: none;
+            color:whitesmoke;
+            font:bolder;
+           
+            transition: 0.7s;
+            padding: 25px;
+           
+        }
+        a:hover{
+            transition: 0.7s;
+            transform: scale(1.5);
+        }
+        #menu{
+            overflow: hidden;
+            height: 100%;
+            position: absolute;
+         background-color: #252525;
+         opacity: 0.7;
+            color: white;
+            width: 0%;
+            transition: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            float: left;
+            z-index: 2;
+           
+        }
+        /* main */
+        .mainWrap{
+            width: auto;
+            margin:auto;
+        }
+        .main{
+            transition: 1s;
+            width: 100%;
+            
+            height: 80vh;
+            
+            background-image: url("./images/bag6.jpg");
+           
+            background-size: cover;
+            background-position: center;
+           
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+           
+           
+        }
+        h1{
+            letter-spacing: 15px;
+            
+        }
+        .info{
+            color: rgb(180, 113, 26);
+            background-color: bisque;
+            border-radius: 25px;
+            margin:auto;
+            opacity: 0.5;
+         
+            display: flex;
+            padding: 25px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+
+        }
+        .info>button{
+            margin: 10px 0px;
+            border-radius: 10px;
+            font-weight:bolder;
+            padding: 12px 24px;
+            background-color: white;
+            color: black;
+        }
+        .info>button:hover{
+            color: white;
+            background-color: black;
+        }
+        .footer{
+            margin-top: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #252525;
+            height: 50vh;
+        }
+       
+        @media only screen and (max-width: 836px) {
+            .info{
+                height: auto;
+                margin:auto;
+            }
+        }
+       /* card */
+       .wrap {
+        margin-top: 20vh;
+            width: auto;
+            display: flex;
+            /* justify-content: space-evenly; */
+            /* flex-wrap: wrap; */
+            flex-basis: calc(50%-10px);
+            overflow-x: scroll;
+            flex-shrink: 0;
+            scroll-snap-type: x mandatory;
+            scroll-snap-align: start;
+        }
+
+        .cards {
+            width: 30vw;
+            height: auto;
+            /* border-radius: 24px; */
+            /* box-shadow: 0px 0px 10px 10px gray; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 10px 25px;
+            padding: 15px;
+        }
+
+        .cards>img {
+            width: 100%;
+            /* border-radius: 12px; */
+            height: 25vh;
+            object-fit: cover;
+            /* margin: 10px 0px; */
+
+        }
+
+        .Cardcontent {
+            /* background-color: whitesmoke; */
+            text-align: center;
+            padding: 15px;
+        }
+
+        .cardbtn {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .cardbtn>.sb {
+            /* background-color: rgb(73, 149, 73); */
+
+            padding: 6px 13px;
+            margin: 5px 5px;
+            /* color: white; */
+            font-weight: bold;
+            border-radius: 12px;
+            transition: 0.8s;
+        }
+        .cardbtn>.sb:hover{
+            transition: 0.8s;
+            
+            background-color: rgb(58, 186, 58);
+            color: white;
+        }
+
+        .cardbtn>.rm {
+            background-color: rgb(210, 81, 81);
+            padding: 6px 12px;
+            margin: 5px 5px;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+            transition: 0.8s;
+        }
+        .cardbtn>.rm:hover{
+            transition: 0.8s;
+            
+            color: rgb(132, 11, 11);
+        }
+
+        @media only screen and (max-width: 913px) {
+            .cards {
+                width: 70%;
+            }
+
+           
+        }
+        /* comments */
+        .comments{
+            margin-top: 20vh;
+            /* background-color: rgb(246, 190, 121); */
+            width: auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .comment-wrap{
+            padding: 10px;
+            width: 30vw;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 8px 8px rgb(190, 184, 184);
+            margin: 10px 0px;
+        }
+        .comm-img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .comment-text{
+            width: 70%;
+        }
+        @media only screen and (max-width: 836px) {
+            .comment-wrap{
+                width: auto;
+            }
+        }
+        /* footer */
+        .footer{
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: #252525;
+            color: white;
+            font-size: large;
+            font-weight: bolder;
+            overflow: auto;
+        }
+        .importantLinks{
+            margin: 5vh 2vw;
+            width: 40%;
+            /* background-color: antiquewhite; */
+        }
+        .importantLinks>img{
+            width: 100px;
+            height:100px ;
+            margin: auto;
+            border-radius: 50%;
+
+        }
+        @media only screen and (max-width: 936px) {
+            .importantLinks{
+                width: 90%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <span  onclick="openmenu()" style="transform: scale(1.3); cursor: pointer;transition: 1s;" id="menubtn">&#9776;</span>
+    </div>
+    <div id="menu">
+        
+    <a href="">HOME</a>
+    <a href="">Contact</a>
+    <a href="">message</a>
+    <a href="">Whatsap</a>
+    <a href="">portfolio</a>
+    </div>
+    <div class="mainWrap">
+        <div class="main" >
+       
+            <div class="info">
+                <h1>Hello Asit</h1>
+                Scrub your way to norish your skin
+                <button>Explore Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="cards">
+            <img src="./images/image1.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+
+        </div>
+        <div class="cards">
+            <img src="./images/image5.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+
+        </div>
+        <div class="cards">
+            <img src="./images/image1.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+
+        </div>
+        <div class="cards">
+            <img src="./images/image5.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+
+        </div>
+        <div class="cards">
+            <img src="./images/image6.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+
+        </div>
+        <div class="cards">
+            <img src="./images/image8.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+            
+        </div>
+        <div class="cards">
+            <img src="./images/image9.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+            
+        </div>
+        <div class="cards">
+            <img src="./images/image12.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+            
+        </div>
+        <div class="cards">
+            <img src="./images/image13.jpeg" alt="">
+            <div class="Cardcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            </div>
+            <div class="cardbtn">
+                <button class="sb">Submit</button>
+                <button class="rm">Remove</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- <h1 style="text-align:center;background-color:burlywood;margin-top:20vh;">Comments section</h1> -->
+
+    <div class="comments">
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+        <div class="comment-wrap">
+            <img src="./images/bag1.jpg" class="comm-img" alt="">
+            <div class="comment-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem nulla, omnis doloribus impedit porro. Tenetur, distinctio consequuntur. Officia doloribus illo unde velit, libero neque.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="importantLinks">
+            <h2>MEET THE NUTRIFY FOLKS</h2>
+            <li>helath tips</li>
+            <li>health oils</li>
+            <li>healt subsciption</li>
+        </div>
+        <div class="importantLinks">
+            <h2>MEET THE NUTRIFY FOLKS</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, reiciendis. Aliquid consectetur vitae libero, saepe perspiciatis laborum accusantium, nemo voluptate voluptas provident architecto eius sint.
+        </div>
+        <div class="importantLinks">
+            <h2>MEET THE NUTRIFY FOLKS</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, reiciendis. Aliquid consectetur vitae libero, saepe perspiciatis laborum accusantium, nemo voluptate voluptas provident architecto eius sint.
+        </div>
+        <div class="importantLinks">
+            <!-- <img src="./images1/google.png" alt="">
+            <img src="./images1/google-play.png" alt=""> -->
+            <img src="./images1/image1.jpg" alt="">
+            <img src="./images1/image3.jpg" alt="">
+            <img src="./images1/image2.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        let main=document.querySelector(".main")
+        let count=0
+        
+        function openmenu()
+       {
+        let menu=document.getElementById("menu")
+        let menubtn=document.getElementById("menubtn")
+            //  menu.style.width="80%"
+             if(menu.style.width==="0%"){
+                menubtn.innerHTML=`&times;`
+                menu.style.width="100%"
+             }else{
+               
+                menubtn.innerHTML=`&#9776;`
+                
+                menu.style.width="0%"
+             }
+       }
+      
+    //    function slideshow(){
+    //     setTimeout(() => {
+    //         count++
+    //         console.log(count)
+    //         main.style.backgroundImage=`url(./images/bag${count}.jpg)`
+    //         if(count==11){
+    //             count=0
+    //         }
+    //     }, 1000);
+    //    }
+    //    window.onload=setInterval(function(){slideshow();},8000)
+       
+    </script>
+</body>
+</html>
